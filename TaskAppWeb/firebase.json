@@ -1,0 +1,10 @@
+{
+  "firebase": "react-firebase-crud",
+  "public": "public",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ],
+  "rules": "rules.json"
+}
