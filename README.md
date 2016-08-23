@@ -11,18 +11,41 @@ $ git clone https://github.com/griffinsockwell/react-firebase-crud.git
 
 Make sure [Node.js](https://nodejs.org/) is installed.
 
-Login to [Firebase](https://www.firebase.com/) and create a new app from the dashboard.
+Login to [Firebase](https://console.firebase.google.com/) and create a new app from the dashboard.
 
-Change the firebase url in two different files.
+Click on 'Add Firebase to your web app'
 
-* TaskAppMobile/src/firebaseUrl.js
-* TaskAppWeb/src/firebaseUrl.js
+Change the firebase config in two different files.
+
+* TaskAppMobile/src/ref.js
+* TaskAppWeb/src/ref.js
 
 ```js
-import Firebase from 'firebase'
-
-export default new Firebase("https://<your-project-name>.firebaseio.com/tasks/")
+const config = {
+  apiKey: "<replace-with-your-config>",
+  authDomain: "<replace-with-your-config>",
+  databaseURL: "<replace-with-your-config>",
+  storageBucket: "<replace-with-your-config>",
+};
 ```
+
+When creating new apps the default security rules require users to be authenticated to be able to read and write to the database. Since this app doesn't require users to be logged in you will need to change your security rules so the app will work.
+
+In the firebase dashboard click on Database and then select RULES and change the rules:
+
+```json
+{
+  "rules": {
+    "tasks": {
+      ".read": "true",
+      ".write": "true"
+    }
+  }
+}
+```
+
+!!!This will allow anyone to read and write to the tasks path in your database.
+To learn more about firebase security check the docs [here](https://firebase.google.com/docs/database/security/).
 
 ### To run the Web App
 
@@ -36,14 +59,9 @@ Install the node modules.
 $ npm install
 ```
 
-Install the firebase-tools.
+Start the development server.
 ```bash
-$ npm install -g firebase-tools
-```
-
-There is a script in package.json to generate the public/bundle.js and serve the project.
-```bash
-$ npm run serve
+$ npm start
 ```
 
 ### To run the Mobile App

@@ -1,0 +1,18 @@
+path / {
+  read() { false }
+  write() { false }
+}
+
+path /tasks {
+  read() { true }
+  write() { true }
+}
+
+path /tasks/{task} is Task;
+
+type Task {
+  text: String,
+  checked: Boolean,
+  starred: Boolean,
+  timestamp: Number
+}

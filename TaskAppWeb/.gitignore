@@ -1,12 +1,9 @@
-# OSX
-#
+# dependencies
+node_modules
+
+# production
+build
+
+# misc
 .DS_Store
-
-# node.js
-#
-node_modules/
 npm-debug.log
-
-#
-#
-public/bundle.js
