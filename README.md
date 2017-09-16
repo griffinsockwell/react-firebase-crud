@@ -23,9 +23,7 @@ Change the firebase config in two different files.
 ```js
 const config = {
   apiKey: "<replace-with-your-config>",
-  authDomain: "<replace-with-your-config>",
   databaseURL: "<replace-with-your-config>",
-  storageBucket: "<replace-with-your-config>",
 };
 ```
 
@@ -44,14 +42,15 @@ In the firebase dashboard click on Database and then select RULES and change the
 }
 ```
 
-!!!This will allow anyone to read and write to the tasks path in your database.
+This will allow anyone to read and write to the tasks path in your database!
 To learn more about firebase security check the docs [here](https://firebase.google.com/docs/database/security/).
+The security rules for this app can be found in [task-app-web/database.rules.json](task-app-web/database.rules.json)
 
 ### To run the Web App
 
 Change into the web app directory.
 ```bash
-$ cd TaskAppWeb
+$ cd task-app-web
 ```
 
 Install the node modules.
@@ -66,11 +65,9 @@ $ npm start
 
 ### To run the Mobile App
 
-Make sure React Native is [setup](https://facebook.github.io/react-native/docs/getting-started.html#content) properly.
-
 Change into the mobile app directory.
 ```bash
-$ cd TaskAppMobile
+$ cd task-app-mobile
 ```
 
 Install the node modules.
@@ -78,26 +75,12 @@ Install the node modules.
 $ npm install
 ```
 
-Start the development server.
+For iOS
 ```bash
-$ npm start
+$ npm run ios
 ```
 
-In a new tab.
+For Android
 ```bash
-$ react-native run-ios
+$ npm run android
 ```
-
----
-
-## License
-
-The MIT License (MIT)
-
-Copyright (c) 2016 Griffin Sockwell
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

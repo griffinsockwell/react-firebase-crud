@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #eee;
+  font-family: 'Open Sans', sans-serif;
+}
+.App {
+  width: 94%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.TaskInput {
+  margin: 20px 0;
+}
+.TaskInput input {
+  width: 100%;
+  height: 50px;
+  padding-left: 10px;
+  border: none;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  background-color: #4a90e2;
+}
+.TaskInput input::-webkit-input-placeholder {
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+}
+.TaskList-empty {
+  width: 100%;
+  text-align: center;
+  margin-top: 80px;
+  font-size: 30px;
+  color: #ddd;
+}
+.TaskListItem {
+  list-style-type: none;
+  width: 100%;
+  min-height: 50px;
+  background: #fff;
+  margin-bottom: 10px;
+  display: flex;
+}
+.TaskListItem-checked {
+  text-decoration: line-through;
+  color: #9b9b9b !important;
+}
+.TaskListItem span {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  font-size: 15px;
+  color: #4a4a4a;
+}
+.TaskListItem button {
+  border: none;
+  background: none;
+  padding: 0 10px;
+  cursor: pointer;
+  color: #ccc;
+}
+.icon-grey {
+  transition: all 0.2s;
+  color: #9b9b9b;
+}
+.icon-grey:hover {
+  color: #828282;
+}
+.icon-red {
+  transition: all 0.2s;
+  color: #d0011b;
+}
+.icon-red:hover {
+  color: #9d0114;
+}
+.icon-yellow {
+  transition: all 0.2s;
+  color: #f8e81c;
+}
+.icon-yellow:hover {
+  color: #dacb07;
+}

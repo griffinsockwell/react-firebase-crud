@@ -1,0 +1,26 @@
+{
+  "rules": {
+    "tasks": {
+      ".read": "true",
+      ".write": "true",
+      "$task": {
+        ".validate": "newData.hasChildren(['text', 'checked', 'starred', 'timestamp'])",
+        "text": {
+          ".validate": "newData.isString()"
+        },
+        "checked": {
+          ".validate": "newData.isBoolean()"
+        },
+        "starred": {
+          ".validate": "newData.isBoolean()"
+        },
+        "timestamp": {
+          ".validate": "newData.isNumber()"
+        },
+        "$other": {
+          ".validate": "false"
+        }
+      }
+    }
+  }
+}
